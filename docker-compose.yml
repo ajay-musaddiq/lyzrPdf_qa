@@ -7,8 +7,6 @@ services:
     restart: always
     environment:
       - FLASK_ENV=production
-    env_file:
-      - ./.env
     volumes:
       - ./uploads:/app/uploads
       - static_volume:/app/static

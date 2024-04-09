@@ -2,14 +2,11 @@ from flask import Flask, render_template, request, session, jsonify, url_for
 import os
 import secrets
 from lyzr import QABot
-from dotenv import load_dotenv
-
-load_dotenv('.env')
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = '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'
 
 # Create the uploads directory if it doesn't exist
 os.makedirs('uploads', exist_ok=True)
@@ -65,4 +62,4 @@ def generate_index_name():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=False)
