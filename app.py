@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, session, jsonify, url_for
 import os
 import secrets
 from lyzr import QABot
+from dotenv import load_dotenv
+
+load_dotenv('.env')
 
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
