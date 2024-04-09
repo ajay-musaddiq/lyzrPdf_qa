@@ -9,7 +9,7 @@ load_dotenv('.env')
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
-os.environ['OPENAI_API_KEY'] = os.environ.get('OPENAI_API_KEY')
+os.environ['OPENAI_API_KEY'] = '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'
 
 # Create the uploads directory if it doesn't exist
 os.makedirs('uploads', exist_ok=True)
